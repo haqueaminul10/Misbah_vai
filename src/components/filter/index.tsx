@@ -27,12 +27,6 @@ const FilterSection = () => {
             <Location />
           </CardAction>
         </CardHeader>
-
-        {/* <CardContent>
-          <p>Card Content</p>
-        </CardContent> */}
-
-        <CardFooter></CardFooter>
       </Card>
     </div>
   );
