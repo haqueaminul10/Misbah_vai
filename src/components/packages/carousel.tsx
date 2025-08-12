@@ -70,15 +70,18 @@ const CarouselItems = () => {
         <CarouselContent>
           {packages.length > 0 &&
             packages.map((data) => (
-              <CarouselItem key={data.id} className='basis-[30%] shrink-0'>
+              <CarouselItem key={data.id} className='basis-[27%] shrink-0'>
                 <Card
-                  className='h-64 bg-cover bg-center rounded-xl shadow-lg'
+                  className='h-64 bg-cover bg-center rounded-xl shadow-lg hover:border-2 border-orange-700 '
                   style={{ backgroundImage: `url(${data.imageUrl.src})` }}
                 >
-                  <CardContent>
-                    <p className='mt-34 text-white font-medium text-2xl'>
-                      {data.title}
-                    </p>
+                  <CardContent className='h-screen '>
+                    <div className=' h-full flex items-end '>
+                      <div className='text-white font-medium text-2xl  w-64'>
+                        {' '}
+                        {data.title}
+                      </div>
+                    </div>
                     <div className='text-white flex items-center text-xs'>
                       <Tag className='h-4' />
                       <span>{data.startingPrice}</span>
