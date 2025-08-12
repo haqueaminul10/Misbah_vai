@@ -1,5 +1,4 @@
-import { Card, CardContent, CardFooter } from '@/components/ui/card';
-
+import { Card, CardContent } from '@/components/ui/card';
 import { MoveRight, Tag } from 'lucide-react';
 import {
   Carousel,
@@ -59,30 +58,28 @@ const packages: PackageType[] = [
 
 const CarouselItems = () => {
   return (
-    <div className=' mt-8'>
+    <div className='mt-8'>
       <Carousel
         opts={{
           align: 'start',
           loop: false,
         }}
-        className='w-full overflow-hidden'
+        className='w-full overflow-hidden relative'
       >
         <CarouselContent>
           {packages.length > 0 &&
             packages.map((data) => (
               <CarouselItem key={data.id} className='basis-[27%] shrink-0'>
                 <Card
-                  className='group h-64 bg-cover bg-center rounded-xl shadow-lg hover:border-2 hover:border-orange-700 '
+                  className='group h-64 bg-cover bg-center rounded-xl shadow-lg hover:border-2 hover:border-orange-700'
                   style={{ backgroundImage: `url(${data.imageUrl.src})` }}
                 >
-                  <CardContent className='h-screen '>
-                    <div className=' h-full flex items-end justify-between '>
-                      <div className='text-white font-medium text-2xl  w-64'>
-                        {' '}
+                  <CardContent className='h-full'>
+                    <div className='h-full flex items-end justify-between'>
+                      <div className='text-white font-medium text-2xl w-64'>
                         {data.title}
                       </div>
                       <div className='border-2 border-orange-700 p-1 rounded-md text-white opacity-0 group-hover:opacity-100 transition-opacity duration-200'>
-                        {' '}
                         <MoveRight />
                       </div>
                     </div>
@@ -95,6 +92,8 @@ const CarouselItems = () => {
               </CarouselItem>
             ))}
         </CarouselContent>
+        <CarouselPrevious className='absolute left-2 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-md text-black hover:bg-gray-200' />
+        <CarouselNext className='absolute right-2 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-md text-black hover:bg-gray-200' />
       </Carousel>
     </div>
   );
