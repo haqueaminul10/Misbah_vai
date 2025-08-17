@@ -7,7 +7,7 @@ export default function Home() {
     <div className='mx-16 my-8'>
       <FilterSection />
       <Packages />
-      {/* <Venus /> */}
+      <Venus />
     </div>
   );
 }
