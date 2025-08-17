@@ -17,19 +17,18 @@ const Venus = () => {
       <Card>
         <CardHeader>
           <CardTitle className='text-lg font-semibold '>
-            <div className='flex items-center justify-between'>
-              <h2 className='text-3xl font-medium'>Venues</h2>
-              <div>
-                <Button variant='secondary'>
-                  See All
-                  <MoveRight />
-                </Button>
-              </div>
-            </div>
+            <section className='flex items-center justify-between'>
+              <h2 className='text-3xl font-medium'>Venus</h2>
+
+              <Button variant='secondary'>
+                See All
+                <MoveRight />
+              </Button>
+            </section>
           </CardTitle>
 
           {/* Venus carousel  section */}
-          <CardDescription>
+          <CardDescription className='w-full overflow-hidden relative '>
             <VenusCarousel />
           </CardDescription>
         </CardHeader>

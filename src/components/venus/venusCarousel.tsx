@@ -77,6 +77,17 @@ const venus: Venue[] = [
     tags: ['Banquet Hall', '300-400pax', 'others', 'others'],
     rent: ' Starting from Tk 23,000',
   },
+  {
+    id: 6,
+    imageUrl: imageVenue,
+    deals: 'Deals of the week',
+    location: 'Sec-11,Mirpur,Dhaka',
+    rating: 4.5,
+    review: 32,
+    label: 'The Vila at Mandeville',
+    tags: ['Banquet Hall', '300-400pax', 'others', 'others'],
+    rent: ' Starting from Tk 23,000',
+  },
 ];
 
 const VenusCarousel = () => {
@@ -91,7 +102,10 @@ const VenusCarousel = () => {
         <CarouselContent>
           {venus &&
             venus.map((venue) => (
-              <CarouselItem key={venue.id} className='basis-[22%] shrink-0'>
+              <CarouselItem
+                key={venue.id}
+                className=' 2xl:basis-[24%] xl:basis-[28%]  shrink-0'
+              >
                 <VenusCard data={venue} />
               </CarouselItem>
             ))}
